@@ -3,3 +3,6 @@
 ################################################################################
 
 /FSL.ModelBinderInMvcAndWebApi/bin
+/.vs
+/FSL.ModelBinderInMvcAndWebApi/obj/Debug
+/packages
