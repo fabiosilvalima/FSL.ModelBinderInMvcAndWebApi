@@ -31,7 +31,6 @@ I have a lot information of environment like logged user id, requested url, fron
 **Assumptions:**
 - The model binder class must work in both MVC and Web Api controllers;
 - I do not want to explicit call those environment info as a local variable.
-- I want to configure **Dependency Injection** to handle **Repository Pattern**.
 
 
 Explaining...
@@ -87,7 +86,7 @@ public class EnvironmentInfoModelBinder : System.Web.Mvc.IModelBinder, System.We
     }
 ```
 
-**Services/Controllers/PersonApiControllercs**
+**Services/Controllers/PersonApiController.cs**
 ```csharp
 [RoutePrefix("api/person")]
     public class PersonApiController : ApiController
