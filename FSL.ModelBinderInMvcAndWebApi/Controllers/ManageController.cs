@@ -11,7 +11,7 @@ using FSL.ModelBinderInMvcAndWebApi.Models;
 namespace FSL.ModelBinderInMvcAndWebApi.Controllers
 {
     [Authorize]
-    public class ManageController : BaseController
+    public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;

@@ -1,15 +1,9 @@
-﻿using FSL.ModelBinderInMvcAndWebApi.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace FSL.ModelBinderInMvcAndWebApi.Binders
+﻿namespace FSL.ModelBinderInMvcAndWebApi.Binders
 {
     public class EnvironmentInfoModelBinder : System.Web.Mvc.IModelBinder, System.Web.Http.ModelBinding.IModelBinder
     {
         /// <summary>
-        /// versão MVC
+        /// MVC version
         /// </summary>
         /// <param name="controllerContext"></param>
         /// <param name="bindingContext"></param>
@@ -17,13 +11,17 @@ namespace FSL.ModelBinderInMvcAndWebApi.Binders
         public object BindModel(System.Web.Mvc.ControllerContext controllerContext,
             System.Web.Mvc.ModelBindingContext bindingContext)
         {
-            var controller = controllerContext.Controller as IEnvironmentInfoController;
+            var info = new Models.EnvironmentInfo();
+            info.RequestedUrl = controllerContext.RequestContext.HttpContext.Request.Url.ToString();
+            info.UserId = GetLoggedUser();
 
-            return controller != null ? controller.GetEnvinromentInfo() : null;
+            // you also can get form/request properties
+
+            return info;
         }
 
         /// <summary>
-        /// versão WEB API
+        /// WEB API version
         /// </summary>
         /// <param name="actionContext"></param>
         /// <param name="bindingContext"></param>
@@ -31,15 +29,21 @@ namespace FSL.ModelBinderInMvcAndWebApi.Binders
         public bool BindModel(System.Web.Http.Controllers.HttpActionContext actionContext,
             System.Web.Http.ModelBinding.ModelBindingContext bindingContext)
         {
-            var controller = actionContext.ControllerContext.Controller as IEnvironmentInfoController;
-            if (controller != null)
-            {
-                bindingContext.Model = controller.GetEnvinromentInfo();
+            var info = new Models.EnvironmentInfo();
+            info.RequestedUrl = actionContext.Request.RequestUri.ToString();
+            info.UserId = GetLoggedUser();
 
-                return true;
-            }
+            // you also can get form/request properties
 
-            return false;
+            bindingContext.Model = info;
+
+            return true;
+        }
+
+        private string GetLoggedUser()
+        {
+            //just a sample
+            return "3242423423";
         }
     }
 }

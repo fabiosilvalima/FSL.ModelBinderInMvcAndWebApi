@@ -208,9 +208,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Binders\EnvironmentInfoModelBinder.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="IEnvironmentInfoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,7 +218,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Controllers\BaseApiController.cs" />
     <Compile Include="Services\Controllers\PersonApiController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

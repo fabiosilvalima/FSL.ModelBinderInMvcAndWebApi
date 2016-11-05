@@ -7,9 +7,9 @@ using System.Web.Mvc;
 
 namespace FSL.ModelBinderInMvcAndWebApi.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeController : Controller
     {
-        public ActionResult Index(EnvironmentInfo environmentInfo)
+        public ActionResult Index(Models.EnvironmentInfo environmentInfo)
         {
             return View();
         }

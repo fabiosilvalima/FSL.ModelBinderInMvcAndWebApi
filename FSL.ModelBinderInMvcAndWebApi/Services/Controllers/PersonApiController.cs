@@ -8,10 +8,10 @@ using FSL.ModelBinderInMvcAndWebApi.Models;
 namespace FSL.ModelBinderInMvcAndWebApi.Services.Controllers
 {
     [RoutePrefix("api/person")]
-    public class PersonApiController : BaseApiController
+    public class PersonApiController : ApiController
     {
         [Route("")]
-        public IHttpActionResult Get(EnvironmentInfo environmentInfo)
+        public IHttpActionResult Get(Models.EnvironmentInfo environmentInfo)
         {
             var result = new
             {
