@@ -2,7 +2,7 @@
 
 **Use of Model Binder in MVC and Web API**
 
-The gol is to show how to create a custom binder to use in both MVC and WEB API applications.
+The goal is to show how to create a custom Model Binder to use in both MVC and WEB API applications.
 
 ---
 
