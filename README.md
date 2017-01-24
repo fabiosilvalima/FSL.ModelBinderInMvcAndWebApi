@@ -4,7 +4,13 @@
 
 The gol is to show how to create a custom binder to use in both MVC and WEB API applications.
 
-![enter image description here](https://fabiosilvalima.files.wordpress.com/2016/11/model-binder-magic.png)
+![enter image description here](https://fabiosilvalima.net/wp-content/uploads/2017/01/fabiosilvalima-uso-de-model-binder-no-mvc-e-web-api.jpg)
+
+> **FULL ARTICLE:**
+>
+> English: https://fabiosilvalima.net/en/use-model-binder-mvc-web-api/
+>
+> Português: https://fabiosilvalima.net/uso-de-model-binder-no-mvc-e-web-api/
 
 ---
 
